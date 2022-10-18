@@ -1,0 +1,181 @@
+Trilokesh_Ranjan_Sarkar BPPIMT
+1. Write a python script to check whether a given number is prime
+or not.
+n = 5
+if n > 1:
+	for i in range(2, int(n/2)+1):
+		if (n % i) == 0:
+			print(num, "is not a prime number")
+		break
+	else:
+		print(n, "is a prime number")
+
+else:
+	print(n, "is not a prime number")
+
+Output
+5 is a prime number
+
+2. Write a python script to print next prime number of a given
+number.
+O=int(input("ENTER ANY NUMBER "))
+p=O+1
+for i in range(2,p):
+    if(p%i==0):
+        p=p+1
+else:
+    print(p,end=" ")
+Output
+NTER ANY NUMBER 5
+7
+
+3. Write a python script to print first N prime number. Value of N
+is given by user.
+numr=int(input("Enter range:"))
+
+print("Prime numbers:",end=' ')
+
+for n in range(1,numr):
+
+    for i in range(2,n):
+
+        if(n%i==0):
+
+            break
+
+    else:
+
+        print(n,end=' ')   
+Output
+Enter range: 50
+Prime numbers: 1 2 3 5 7 11 13 17 19 23 29 31 37 41 43 
+47 
+
+4. Write a python script to print all prime numbers between two
+given numbers.
+lower = 900
+upper = 1000
+
+print("Prime numbers between", lower, "and", upper, "are:")
+
+for num in range(lower, upper + 1):
+   # all prime numbers are greater than 1
+   if num > 1:
+       for i in range(2, num):
+           if (num % i) == 0:
+               break
+       else:
+           print(num)
+
+Output
+Prime numbers between 900 and 1000 are:
+907
+911
+919
+929
+937
+941
+947
+953
+967
+971
+977
+983
+991
+997
+
+5. Write a python script to check whether two given numbers are
+co-prime or not.
+def gcd(p,q):
+    while q != 0:
+        p, q = q, p%q
+    return p
+def is_coprime(x, y):
+    return gcd(x, y) == 1
+print(is_coprime(17, 13))
+print(is_coprime(17, 21))
+print(is_coprime(15, 21))
+print(is_coprime(25, 45))
+
+Output
+True
+True
+False
+False
+
+6. Write a python script to print first N odd natural numbers in
+reverse order using range function in for loop.
+start, end = 4, 19
+
+
+for num in range(start, end + 1):
+	
+	
+	if num % 2 != 0:
+		print(num, end = " ")
+Output
+5 7 9 11 13 15 17 19 
+
+7. Write a python script to print first N even natural numbers in
+reverse order using range function in for loop.
+for num in range(4,15,2):
+
+	print(num)
+Output
+4 6 8 10 12 14 
+
+8. Write a python script to print all prime factors of a given
+number.
+Number = int(input(" Please Enter any Number: "))
+
+for i in range(2, Number + 1):
+    if(Number % i == 0):
+        isprime = 1
+        for j in range(2, (i //2 + 1)):
+            if(i % j == 0):
+                isprime = 0
+                break
+            
+        if (isprime == 1):
+            print(" %d is a Prime Factor of a Given Number %d" %(i, Number))
+
+Output
+Please Enter any Number: 10
+2 is a Prime Factor of a Given Number 10
+5 is a Prime Factor of a Given Number 10
+
+
+9. Write a python script to calculate LCM of two numbers.
+x = 20
+y = 25
+if x > y:
+  x, y = y, x
+for i in range(1,x+1):
+  if x%i == 0 and y%i == 0:
+    gcd = i
+
+lcm = (x*y)/gcd
+
+print("LCM of", x, "and", y, "is:", lcm)
+Output
+LCM of 20 and 25 is: 100.0
+
+10. Write a python script to calculate HCF of two numbers.
+def compute_hcf(x, y):
+    if x > y:
+        smaller = y
+    else:
+        smaller = x
+    for i in range(1, smaller+1):
+        if((x % i == 0) and (y % i == 0)):
+            hcf = i 
+    return hcf
+
+num1 = 54 
+num2 = 24
+
+print("The H.C.F. is", compute_hcf(num1, num2))
+
+Output
+The H.C.F. is 6
+

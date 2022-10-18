@@ -1,0 +1,73 @@
+Trilokesh_Ranjan_Sarkar BPPIMT
+1. Write a python script to print dict items (KEY, VALUE), each in one line
+dict1 = { 'Name' : 'Trilokesh', 'Age': 20, 'Gender': 'male'}
+for i in dict1:
+    print(i, ':' ,dict1[i])
+
+Output:
+Name : Priyanka
+Age : 20
+Gender : Female
+
+
+2. Write a python script to create a dictionary in which each item is a pair of Roll number (as
+KEY) and Student Name (as VALUE)
+dict1 = { 45 : 'Trilokesh', 12 : 'Debojyoti', 9: 'Aritra', 27 : 'Samik'}
+for i in dict1:
+    print(i, ':' ,dict1[i])
+
+Output:
+23 : Priyanka
+12 : Debojyoti
+9 : Aritra
+27 : Samik
+
+
+3. Write a python script to sort a dict according to KEY
+dict1 = { 23 : 'Priyanka', 12 : 'Debojyoti', 27: 'Samik', 9 : 'Aritra'}
+for k in sorted(dict1):
+    print(k, ':' ,dict1[k])
+
+Output:
+9 : Aritra
+12 : Debojyoti
+27 : Samik
+45 : Trilokesh
+
+4. Write a python script to sort a dict according to VALUE
+dict1 = { 23 : 'Priyanka', 12 : 'Debojyoti', 27: 'Samik', 9 : 'Aritra'}
+for v in sorted(dict1.values()):
+    print(v)
+
+Output:
+Aritra
+Debojyoti
+Priyanka
+Samik
+
+5. Write a python script to take dictionary from the keyboard and print the
+sum of values
+dict1 = {}
+n = int(input("Enter number of items in dict1: "))
+sum1 = 0
+for i in range(n):
+    k = input("Enter key (string) ")
+    v = int(input("Enter value (int)  "))
+    dict1[k] = v
+    sum1 = sum1 + dict1[k]
+print(dict1)
+print("Sum is ",sum1)
+
+Output:
+Enter number of items in dict1: 4
+Enter key (string) tinni
+Enter value (int)  98
+Enter key (string) Trilokesh
+Enter value (int)  86
+Enter key (string) riya
+Enter value (int)  97
+Enter key (string) piyali
+Enter value (int)  85
+{'tinni': 98, 'Trilokesh': 86, 'riya': 97, 'piyali': 85}
+Sum is  366
+
